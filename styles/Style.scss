@@ -1,0 +1,15 @@
+@import './section/navbarStyle.scss';
+@import './section/homeStyle.scss';
+@import './section/mixins.scss';
+@import './section/animations.scss';
+
+* , :root {
+padding: 0;
+margin: 0;
+}
+
+html{
+box-sizing: border-box;    
+font-size: 62.5%;
+font-family: 'Roboto Mono', monospace;
+}

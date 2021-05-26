@@ -1,0 +1,31 @@
+.navbar{
+background: red;
+padding: 1rem;
+
+&-container{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    width: 80%;
+    margin: 0 auto;
+
+    &-containerLogo{
+      &-title{
+          color: white;
+    }//end of the title
+}//end of the container Logo
+
+&-containerLinks{
+    margin: 0 auto;
+ &-ul{
+     &-li{
+         list-style: none;
+         &-links{
+             text-decoration: none;
+             display: inline-block;
+             padding: 0 1rem;
+         }
+     }
+ }
+}//end of the container links
+}//end of the display
+}//end of the navbar
