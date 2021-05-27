@@ -1,5 +1,7 @@
+@import './variables.scss';
+
 .navbar{
-background: red;
+background: $color-primary-dark;
 padding: 1rem;
 
 &-container{
@@ -23,6 +25,12 @@ padding: 1rem;
              text-decoration: none;
              display: inline-block;
              padding: 0 1rem;
+             color:$color-font;
+             transition: 0.2s;
+
+             &:hover{
+                 transform: scale(1.2);
+             }
          }
      }
  }
