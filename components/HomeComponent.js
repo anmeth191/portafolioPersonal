@@ -25,7 +25,7 @@ render(){
 } //end of the class Component
 
 const personalInfoState = (state)=>{
-return{information:state}
+return{information:state.personalInfo}
 }
 
 export default connect(personalInfoState)(HomeComponent);

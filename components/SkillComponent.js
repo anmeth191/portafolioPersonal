@@ -15,16 +15,14 @@ seeAnimation = ()=>{
 }
 
 render(){
-    const { skills } = this.props;
-    
-    
+    const { skill } = this.props.skills;
 return(
     <div>
         <Navbar />
         <div className="skillMain">
            <div className="skillMain-container">
-            {
-              skills.map(skill =>{
+            {  
+                skill.map(skill =>{
                   let barWidth = 0;
                    if(skill === 'JavaScript'){ barWidth = 82}
                    if(skill === 'HTML'){barWidth = 70 }
@@ -63,7 +61,7 @@ return(
 const setSkillsProps = (state)=>{
 
     return{
-        skills:state.skills
+        skills:state.personalInfo 
     }
 }
 export default connect(setSkillsProps)(SkillComponent);

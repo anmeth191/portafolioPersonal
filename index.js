@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM  from 'react-dom';
 import App from './components/App';
-import { createStore } from 'redux';
+import { createStore, combineReducers} from 'redux';
 import { Provider } from 'react-redux';
 import personalInfo from './reducers/personalInfo';
+import educationReducer from './reducers/education';
 import Style from './styles/Style.scss';
-const store = createStore(personalInfo);
+const store = createStore(combineReducers({personalInfo , educationReducer}));
 
 ReactDOM.render(
   <Provider store={store}><App /></Provider>, document.querySelector('#root')

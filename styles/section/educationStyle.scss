@@ -1,0 +1,41 @@
+@import './variables.scss';
+@import './animations.scss';
+
+.education-container{
+    background:$color-primary-dark;
+    color:$color-font;
+    height: 100vh;
+    overflow-y: hidden;
+
+    &-centered{
+       position: relative; 
+        top: 10%;
+        padding: 4rem;
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: repeat(2 , 1fr);
+        background: red;
+       
+       &-content{
+           background: blue;
+           &>div:not(:first-child){margin-top: 1rem;}
+           &>div{background: green;}
+       }
+
+        &-image{
+            justify-self: center;
+            background:url('../assets/upoli.jpg');
+            background-size: cover;
+            height: 20rem;
+            width: 100%;
+            animation-name: goTop;
+            animation-duration:2s ;
+            animation-fill-mode: forwards;
+
+        }
+    }//end of the centered
+
+
+}//end of the education container
