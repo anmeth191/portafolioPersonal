@@ -5,8 +5,9 @@ import { createStore, combineReducers} from 'redux';
 import { Provider } from 'react-redux';
 import personalInfo from './reducers/personalInfo';
 import educationReducer from './reducers/education';
+import experienceReducer from './reducers/experience';
 import Style from './styles/Style.scss';
-const store = createStore(combineReducers({personalInfo , educationReducer}));
+const store = createStore(combineReducers({personalInfo , educationReducer, experienceReducer }));
 
 ReactDOM.render(
   <Provider store={store}><App /></Provider>, document.querySelector('#root')

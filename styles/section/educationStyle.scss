@@ -16,12 +16,15 @@
         display: grid;
         grid-gap: 0.5rem;
         grid-template-columns: repeat(2 , 1fr);
-        background: red;
+        
        
        &-content{
-           background: blue;
+         
            &>div:not(:first-child){margin-top: 1rem;}
-           &>div{background: green;}
+           animation-name: goTop;
+           animation-duration: 2s;
+        animation-fill-mode: forwards;
+           
        }
 
         &-image{
@@ -31,8 +34,8 @@
             height: 20rem;
             width: 100%;
             animation-name: goTop;
-            animation-duration:2s ;
-            animation-fill-mode: forwards;
+            animation-duration:4s ;
+            animation-fill-mode:forwards;
 
         }
     }//end of the centered

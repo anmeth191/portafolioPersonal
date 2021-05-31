@@ -3,6 +3,7 @@ import {BrowserRouter as Router , Route , Switch } from 'react-router-dom';
 import  SkillComponent  from './SkillComponent';
 import HomeComponent from './HomeComponent';
 import EducationComponent from './EducationComponent';
+import ExperienceComponent from './ExperienceComponent';
 
 class App extends React.Component{
 
@@ -13,6 +14,7 @@ return(
         <Route exact path="/" component={HomeComponent} />
         <Route  path="/skills" component={SkillComponent} />
         <Route path="/education" component={EducationComponent} />
+        <Route path="/experience" component={ExperienceComponent} /> 
         </Switch>
         </Router>
 )//end of the return
