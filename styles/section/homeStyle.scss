@@ -10,7 +10,7 @@
     background-position: center;
     background-size: cover;
 
-   
+
 
     &-container{
         height: 100vh;
@@ -22,6 +22,15 @@
         animation-duration: 0.9s;
         animation-fill-mode: forwards;
         z-index: 1;
+
+           
+    @include responsive(phone){
+        
+        width: 100%;
+        clip-path: none;
+        animation: none;
+        background: rgba($color-primary-dark , 0.5);
+    }
       
         
         &-content{
@@ -32,7 +41,16 @@
              padding: 1.2rem;
              color: $color-font;
 
-             @include centerPosition;      
+        
+             @include centerPosition;
+             
+             @include responsive(phone){
+                 @include centerPositionPhone;
+                 width: 80%;
+                 background: rgba($color-primary-dark,0.7);
+                 text-align: center;
+            }
+     
              animation-name: goTop;
              animation-delay:0.5s;
              animation-duration: 2.5s ;

@@ -2,22 +2,39 @@
 all the style in that component are created here */
 
 @import './variables.scss';
+@import './mixins.scss';
 
+.skill{
+    height: 100%;
+}
 .skillMain{
     background: $color-primary-dark;
     height: 100%;
     color: $color-font;
     padding: 1rem;
 
+ 
+
     &-container{
         
         width: 80%;
         margin: 0 auto;
         padding: 4rem;
+        height: 100%;
+
+        @include responsive(phone){
+            width: 90%;
+            height: 100%;
+            padding: 10rem 0;  
+        }
 
         &-skill{
            margin-bottom: 1.3rem;
            
+           @include responsive(phone){
+               margin-bottom: 3rem;
+           }
+
            &-progressBar{
                height: 2rem;
                background: $color-primary-light;

@@ -17,7 +17,7 @@ seeAnimation = ()=>{
 render(){
     const { skill } = this.props.skills;
 return(
-    <div>
+    <div className="skill">
         <Navbar />
         <div className="skillMain">
            <div className="skillMain-container">

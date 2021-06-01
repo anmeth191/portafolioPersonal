@@ -16,6 +16,11 @@ html{
 box-sizing: border-box;    
 font-size: 62.5%;
 font-family: 'Roboto Mono', monospace;
+
+@include responsive(phone){
+    font-size: 43.75% ;
+}
+
 }
 
 

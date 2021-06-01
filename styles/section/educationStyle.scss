@@ -1,11 +1,20 @@
 @import './variables.scss';
 @import './animations.scss';
+@import './mixins.scss';
+
+.education{
+  height: 100vh;
+}
 
 .education-container{
     background:$color-primary-dark;
     color:$color-font;
     height: 100vh;
     overflow-y: hidden;
+    
+    @include responsive(phone){
+        height: 100%;
+    }
 
     &-centered{
        position: relative; 
@@ -17,6 +26,15 @@
         grid-gap: 0.5rem;
         grid-template-columns: repeat(2 , 1fr);
         
+        
+        @include responsive(phone){
+            grid-template-columns: 1fr;
+            padding: 1rem;
+            grid-gap: 10rem;
+            height: 40%;
+            width: 90%;
+         
+        }
        
        &-content{
          
@@ -24,7 +42,10 @@
            animation-name: goTop;
            animation-duration: 2s;
         animation-fill-mode: forwards;
-           
+          
+        @include responsive(phone){
+            text-align: center;
+        }
        }
 
         &-image{
@@ -36,6 +57,10 @@
             animation-name: goTop;
             animation-duration:4s ;
             animation-fill-mode:forwards;
+
+            @include responsive(phone){
+                height: 55rem;
+            }
 
         }
     }//end of the centered
