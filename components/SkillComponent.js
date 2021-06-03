@@ -7,13 +7,6 @@ class  SkillComponent  extends React.Component{
         widthBar: 0
     }
 
-seeAnimation = ()=>{
-
-    const animation = setInterval(()=>{
-        alert('Hello world')
-    } , 2000)
-}
-
 render(){
     const { skill } = this.props.skills;
 return(

@@ -5,6 +5,7 @@ import HomeComponent from './HomeComponent';
 import EducationComponent from './EducationComponent';
 import ExperienceComponent from './ExperienceComponent';
 
+
 class App extends React.Component{
 
 render(){

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import { connect } from 'react-redux';
-import educationReducer from '../reducers/education';
+
 
 class EducationComponent extends React.Component{
 

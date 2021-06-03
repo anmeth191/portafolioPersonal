@@ -1,8 +1,11 @@
 @import './variables.scss';
-
+@import './mixins.scss';
 .navbar{
 background: $color-primary-dark;
 padding: 1rem;
+@include responsive(phone){
+    padding: 2rem;
+}
 
 &-container{
     display: grid;
@@ -17,23 +20,86 @@ padding: 1rem;
 }//end of the container Logo
 
 &-containerLinks{
-    margin: 0 auto;
- &-ul{
-     &-li{
-         list-style: none;
-         &-links{
-             text-decoration: none;
-             display: inline-block;
-             padding: 0 1rem;
-             color:$color-font;
-             transition: 0.2s;
+    
 
-             &:hover{
-                 transform: scale(1.2);
-             }
+ 
+   &-ul{
+       width: 80%;
+       margin: 0 auto;
+     
+     &   .barMenu{
+         
+    
+
+         &-bar{
+        float: right;
+        display: block;
+         background:$color-font;
+         width: $widthBar;
+         height: $heightBar;
+         position: relative;
+         display: none;
+
+         &:hover{ 
+           cursor: pointer;
          }
+ 
+        @include responsive(phone){
+            display: block;
+            margin-top:1.2rem ;
+        }
+
+         &::before{
+            position: absolute;
+            content:'';
+             background:$color-font;
+             width: $widthBar;
+             height: $heightBar;
+             top: -170%;
+             left: 0;
+             transition: 0.2s;
+          
+         }
+
+       
+
+         &::after{
+            position: absolute;
+            content:'';
+             background: $color-font;
+             width: $widthBar;
+             height: $heightBar;
+             top: 170%;
+             left: 0;
+             transition: 0.2s;
+    
+         }
+        }
      }
+
+    &-li{
+        list-style: none;
+        float: right;
+         display: block;
+         @include responsive(phone){
+             display: none;
+         }      
+        &::after{
+            content:'';
+            clear: both;
+            display: table;
+        }
+  
+        
+
+        &-links{
+            padding-left:  2rem;
+            color: white;
+            text-decoration: none;
+        }
+    }
  }
 }//end of the container links
 }//end of the display
 }//end of the navbar
+

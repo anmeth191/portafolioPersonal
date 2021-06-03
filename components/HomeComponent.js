@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
+import SideNavBar from './sideNavbar';
+
 import { connect } from 'react-redux';
 
 class HomeComponent extends React.Component{
@@ -10,7 +12,7 @@ render(){
    
     <div className="homeComponent">
         <Navbar />
-        
+       <SideNavBar /> 
         <div className="homeComponent-container">
             <div className="homeComponent-container-content">
             <h1 className="homeComponent-container-content-title" >Welcome</h1>

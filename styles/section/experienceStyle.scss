@@ -11,7 +11,7 @@
         color: $color-font;
         margin: 0 auto;
         height: 100%;  
-        padding: 8rem;
+        padding: 7.6rem;
         display: grid;
         grid-template-columns: repeat(8 , minmax(min-content , 1fr));
         grid-template-rows: repeat(8 , minmax(min-content , 3rem));
@@ -73,8 +73,8 @@
                 grid-column: 1 / -1;
                 grid-row: 2/3;
             }
-          
         }
+        
         &-element3{
         
             grid-column: 5 / -1;
