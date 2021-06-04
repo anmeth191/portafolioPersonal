@@ -1,8 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import SideNavBar from './sideNavbar';
 
 const Navbar = ()=>{
-
+    let [style , setStyle ] = useState(false)
+    const changeStyle = ()=>{
+      
+   if(!style){
+       setStyle(style=true)
+       }
+       else
+       {
+       setStyle(style=false)
+      }
+ }
     return(
      <nav className="navbar">
          
@@ -22,7 +34,9 @@ const Navbar = ()=>{
                  <Link to="/experience" className="navbar-container-containerLinks-ul-li-links">Experience</Link>
                  </li>
 
-                 <div className="barMenu">
+                 <div className="barMenu"  onClick={changeStyle}>
+                 <SideNavBar display={style} />
+                      
                      <div className="barMenu-bar"></div>
                  </div>
                 

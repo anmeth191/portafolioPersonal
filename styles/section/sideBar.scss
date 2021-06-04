@@ -1,15 +1,23 @@
 @import './variables.scss';
 @import './mixins.scss';
-.sideBar{
-    background: $color-primary ;
-    color: white;
-    height: 30vh;
-    position: relative;
-    &-container{
-        @include centerElement;
-        width: 60%;
-        text-align: center;
-        padding: 1.5rem;
-        
-    }
+
+.sideNavbar{
+    height: 100%;
+    width: 30%;
+    background:red;
+    z-index: 20;
+    position: fixed;
+    opacity: 0.7;
+    display: none;
+    
+}
+
+.sideNavbar-toggle{
+    display: block;
+}
+
+.app{
+    position: absolute;
+    top: 0;
+    width: 100%;
 }

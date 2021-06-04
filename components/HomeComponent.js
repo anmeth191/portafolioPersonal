@@ -12,7 +12,7 @@ render(){
    
     <div className="homeComponent">
         <Navbar />
-       <SideNavBar /> 
+    
         <div className="homeComponent-container">
             <div className="homeComponent-container-content">
             <h1 className="homeComponent-container-content-title" >Welcome</h1>

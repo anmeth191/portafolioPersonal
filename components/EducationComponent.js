@@ -10,6 +10,7 @@ render(){
 return(
     <div className="education">
         <Navbar />
+
          <div className="education-container">
              <div className="education-container-centered">
                  <div className="education-container-centered-content">
