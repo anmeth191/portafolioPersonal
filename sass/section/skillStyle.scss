@@ -1,0 +1,79 @@
+/*The component in react for this file is SkillComponent.js ,
+all the style in that component are created here */
+
+@import './variables.scss';
+@import './mixins.scss';
+
+.skill{
+    height: 100%;
+}
+.skillMain{
+    background: $color-primary-dark;
+    height: 100%;
+    color: $color-font;
+    padding: 1rem;
+
+ 
+
+    &-container{
+        
+        width: 80%;
+        margin: 0 auto;
+        padding: 4rem;
+        height: 100%;
+
+        @include responsive(tablet-portrait){
+            height: 100%;
+            padding-bottom: 25rem;
+        }
+
+        @include responsive(phone){
+            width: 90%;
+            height: 100%;
+            padding: 10rem 0;  
+        }
+
+        &-skill{
+           margin-bottom: 1.3rem;
+           
+           @include responsive(phone){
+               margin-bottom: 3rem;
+           }
+
+           &-progressBar{
+               height: 2rem;
+               background: $color-primary-light;
+               width: 100%;
+               position:relative;
+
+               &-width{
+                   content: '';
+                   position: absolute;
+                   top: 0;
+                   left: 0;
+                   height: 2rem;
+                   background: $color-primary;
+                   z-index: 1;
+                   animation-name: barAnimation;
+                   animation-duration: 2s ;
+                   animation-fill-mode: forwards;
+                   display: grid;
+                   align-items: center;
+                   justify-content: end;
+
+                   &-span{
+
+                       text-align: center;
+                       display: block;
+                       padding: 0.5rem;
+                       animation-name: goTop;
+                       animation-delay: 2s;
+                       animation-duration: 1s;
+                       animation-fill-mode: forwards;
+                       opacity: 0;
+                   }
+               }
+           }
+        }
+    }//end of the container
+}

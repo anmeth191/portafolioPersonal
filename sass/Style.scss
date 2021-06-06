@@ -1,0 +1,36 @@
+@import './section/navbarStyle.scss';
+@import './section/homeStyle.scss';
+@import './section/mixins.scss';
+@import './section/animations.scss';
+@import './section/variables.scss';
+@import './section/skillStyle.scss';
+@import './section/educationStyle.scss';
+@import './section/experienceStyle.scss';
+@import './section/sideBar.scss';
+
+* , :root {
+padding: 0;
+margin: 0;
+}
+
+html{
+box-sizing: border-box;    
+font-size: 62.5%; //equal to 10 / 16 (1rem)
+font-family: 'Roboto Mono', monospace;
+
+@include responsive(tablet-landscape){
+    font-size:  50%;
+}
+
+@include responsive(phone){
+    font-size: 43.75% ;//equal to 7 / 16(1rem)
+}
+
+}
+//This container belongs to the seideBar
+.app{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+

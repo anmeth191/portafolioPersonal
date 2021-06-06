@@ -21,7 +21,7 @@ return ReactDOM.createPortal(
             list.map((element)=>{
                 return(
                     <li key={element} className="sideNavbar-container-elements-ul-li">
-                        <Link to={`/${element}`}>{element}</Link>
+                        <Link className="sideNavbar-container-elements-ul-li-links"  to={`/${element}`}>{element}</Link>
                     </li>
                 )//end of the return
             }) //end of the map function

@@ -1,0 +1,91 @@
+@import './mixins.scss';
+@import './animations.scss';
+@import './variables.scss';
+
+.homeComponent{
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient( to bottom right , rgba($color-primary, 0.8) ,
+    rgb($color-primary-dark , 0.9)), url('../assets/background.jpg') ;
+    background-position: center;
+    background-size: cover;
+
+
+
+    &-container{
+        height: 100vh;
+        background: $color-primary-dark;
+        width: 60%;
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+        animation-name: fromLeft;
+        animation-duration: 0.9s;
+        animation-fill-mode: forwards;
+        z-index: 1;
+        
+       
+     @include responsive(tablet-portrait){
+            animation:landscapeHome;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+           
+    @include responsive(phone){
+        
+        width: 100%;
+        clip-path: none;
+        animation: none;
+        background: rgba($color-primary-dark , 0.5);
+    }
+        &-content{
+             width: 65%;
+             margin: 0 auto;
+            transform: translate(-50% , -50%);
+            letter-spacing: 0.05rem;
+             padding: 1.2rem;
+             color: $color-font;
+
+             @include centerPosition;
+
+             @include responsive(tablet-portrait){
+              animation-delay: 0.8s;
+              text-align: center;
+              width: 70%;    
+                
+             }
+             
+             @include responsive(phone){
+                 @include centerPositionPhone;
+                 width: 80%;
+                 background: rgba($color-primary-dark,0.7);
+                 text-align: center;
+            }
+     
+             animation-name: goTop;
+             animation-delay:0.5s;
+             animation-duration: 2.5s ;
+             animation-fill-mode: forwards;
+             opacity: 0;
+                 
+            &-title{
+                display: inline-block;
+                padding: 1rem;
+                opacity: 0;
+                animation-name: goTop;
+                animation-duration: 1s;
+                animation-delay: 1s;
+                animation-fill-mode: forwards;
+            }//end of the title
+
+            &-secondary{
+                padding: 0.5rem;
+                animation-name: goTop;
+                animation-duration: 1.2s;
+                animation-fill-mode: forwards;
+                animation-delay: 1.2s;
+                opacity: 0;
+            }//end of the secondary content
+        }//end of the content
+   
+}//end of the container
+}//end of the main component
